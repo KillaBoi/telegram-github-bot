@@ -1,0 +1,2 @@
+cswaddissue - Add an issue to Github. Example: /cswaddissue This is the title
+cswabout - Show information about me
