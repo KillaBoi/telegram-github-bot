@@ -2,9 +2,10 @@ const assert = require('assert');
 const { sample, range } = require('lodash');
 
 const { GITHUB_REPO, GITHUB_OWNER, ADD_ISSUE_REPLY_STICKER_IDS } = process.env;
-const SPICE = '🌶️';
 
 const addIssueReplyStickers = (ADD_ISSUE_REPLY_STICKER_IDS || '').split(/,/g);
+
+const OKAY_EMOJI = '👌';
 
 assert(GITHUB_OWNER, 'GITHUB_OWNER');
 assert(GITHUB_REPO, 'GITHUB_REPO');
@@ -19,9 +20,7 @@ module.exports = async ({ ctx, octokit }) => {
     owner: GITHUB_OWNER,
     repo: GITHUB_REPO,
     title,
-    body: range(0, 4)
-      .map(_ => SPICE)
-      .join(''),
+    body: OKAY_EMOJI,
   });
 
   const stickerId = sample(addIssueReplyStickers);
@@ -30,5 +29,5 @@ module.exports = async ({ ctx, octokit }) => {
     await ctx.replyWithSticker(stickerId);
   }
 
-  await ctx.reply(`Thanks! ${issue.html_url}`);
+  await ctx.reply(`Added. ${issue.html_url}`);
 };
