@@ -1,2 +1,2 @@
-exports.cswaddissue = require('./addissue');
-exports.cswabout = require('./about');
+exports.addissue = require('./addissue');
+exports.ssiabout = require('./about');

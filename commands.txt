@@ -1,2 +1,2 @@
-cswaddissue - Add an issue to Github. Example: /cswaddissue This is the title
-cswabout - Show information about me
+addissue - Add an issue to Github. Example: /addissue This is the title
+ssiabout - Show information about this bot
