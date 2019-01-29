@@ -1,6 +1,6 @@
 {
   "name": "telegram-bot-github",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Telegram bot for Github access",
   "scripts": {
     "watch": "nodemon -x 'DEBUG=* npm start'",
